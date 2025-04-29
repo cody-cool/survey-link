@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <title>問卷隨機分流</title>
+    <script>
+        function redirectToSurvey() {
+            // 定義問卷連結
+            const surveys = [
+                "https://forms.gle/fcFSB8i7b5d3aM9e9", // 第一份問卷連結
+                "https://forms.gle/4DpEsURFXzDxWn9z9"  // 第二份問卷連結
+            ];
+
+            // 隨機選一個問卷
+            const randomIndex = Math.floor(Math.random() * surveys.length);
+
+            // 導向選中的問卷
+            window.location.href = surveys[randomIndex];
+        }
+    </script>
+</head>
+<body onload="redirectToSurvey()">
+    <p>載入中，請稍候...</p>
+</body>
+</html>
